@@ -1,0 +1,46 @@
+#
+# Shorewall -- /etc/shorewall/rules
+#
+# For information on the settings in this file, type "man shorewall-rules"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-rules.html
+#
+##############################################################################################################################################################
+#ACTION		SOURCE		DEST		PROTO	DPORT	SPORT	ORIGDEST	RATE	USER	MARK	CONNLIMIT	TIME	HEADERS	SWITCH	HELPER
+
+?SECTION ALL
+?SECTION ESTABLISHED
+?SECTION RELATED
+?SECTION INVALID
+?SECTION UNTRACKED
+?SECTION NEW
+
+ACCEPT	loc	net	tcp	443,80,20,21,22,25,110,143,943
+
+ACCEPT	loc:192.168.0.100 net 
+
+ACCEPT	loc	net:8.8.8.8	udp	53
+
+ACCEPT	loc	net	udp 53 
+
+ACCEPT	loc 	fw	udp 	67,68,53,69
+ACCEPT	loc	fw	tcp	22,110,80,443,20,21,67,68
+
+ACCEPT	fw	net	tcp 	80,443,53,20,21
+ACCEPT	fw	net	udp	53,67,68
+
+ACCEPT	net	fw	tcp	80,443,22,10000,20,21
+
+#ACCEPT ICMP
+
+ACCEPT	net	fw	icmp 
+ACCEPT	loc	fw	icmp 
+ACCEPT	loc	net	icmp 
+
+#PORT FORWARD
+
+DNAT	net	loc:192.168.0.100:22	tcp 2222 	
+
+
+
