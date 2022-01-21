@@ -1,0 +1,18 @@
+Jan 20 18:37:36 rocky systemd[3452]: pam_unix(systemd-user:session): session opened for user root by (uid=0)
+Jan 20 18:37:36 rocky login[1380]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Jan 20 18:37:36 rocky login[1380]: ROOT LOGIN ON tty1
+Jan 20 18:39:29 rocky sshd[4315]: Accepted password for root from 192.168.20.28 port 52670 ssh2
+Jan 20 18:39:29 rocky sshd[4315]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Jan 20 18:40:16 rocky sshd[4473]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.20.28  user=root
+Jan 20 18:40:18 rocky sshd[4473]: Failed password for root from 192.168.20.28 port 52678 ssh2
+Jan 20 18:40:21 rocky sshd[4473]: Failed password for root from 192.168.20.45 port 52678 ssh2
+Jan 20 18:40:26 rocky sshd[4473]: Failed password for root from 192.168.20.78 port 52678 ssh2
+Jan 20 18:40:28 rocky sshd[4473]: Connection closed by authenticating user root 192.168.20.28 port 52678 [preauth]
+Jan 20 18:40:28 rocky sshd[4473]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.20.28  user=root
+Jan 20 18:41:09 rocky sshd[4478]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.20.28  user=root
+Jan 20 18:41:11 rocky sshd[4478]: Failed password for root from 192.168.20.12 port 52688 ssh2
+Jan 20 18:41:11 rocky sshd[4478]: Failed password for root from 192.168.20.12 port 52688 ssh2
+Jan 20 18:41:15 rocky sshd[4478]: Failed password for root from 192.168.20.28 port 52688 ssh2
+Jan 20 18:41:15 rocky sshd[4478]: Connection closed by authenticating user root 192.168.20.28 port 52688 [preauth]
+Jan 20 18:41:15 rocky sshd[4478]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.20.28  user=root
+
