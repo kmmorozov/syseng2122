@@ -1,0 +1,11 @@
+dnf -y update
+dnf -y install httpd
+systemctl stop firewalld 
+systemctl disable firewalld
+sed -i 's/Listen 80/Listen 1080/g' /etc/httpd/conf/httpd.conf
+systemctl enable httpd 
+systemctl start httpd 
+echo > 'ura rabotaet!!!' > /var/www/html/index.html
+setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+
