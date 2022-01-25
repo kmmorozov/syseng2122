@@ -60,12 +60,6 @@ if __name__ == '__main__':
        username = (connect_data[server][1]).strip()
        password = (connect_data[server][2]).strip()
        push_commands_to_server(server.strip(),username,password,commands)
-       
-       
-        
-        
-    
-    
     
     
     
