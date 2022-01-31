@@ -20,3 +20,27 @@ tn.read_until(b'Authentication accepted')
 
 print('login ok')
 
+
+tn.write(b'Action: Originate\n')
+tn.write(b'Channel: SIP/301\n')
+tn.write(b'Context: my\n')
+tn.write(b'Exten: 802\n')
+tn.write(b'Priority: 1\n')
+tn.write(b'\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
