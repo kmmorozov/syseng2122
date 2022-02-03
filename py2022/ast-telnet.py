@@ -27,20 +27,3 @@ tn.write(b'Context: my\n')
 tn.write(b'Exten: 802\n')
 tn.write(b'Priority: 1\n')
 tn.write(b'\n')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
