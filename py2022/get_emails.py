@@ -1,7 +1,18 @@
 import requests
-import re 
+import re
+import sys
 
-result = requests.get('https://ipap.ru')
+#site = sys.argv[1]
+
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('site', help="enter site for get e-mail ", type=str)
+
+args = parser.parse_args()
+site = args.site
+
+
+result = requests.get(site)
 
 #print(result.text)
 
